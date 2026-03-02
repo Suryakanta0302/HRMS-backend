@@ -1,11 +1,12 @@
-from .services.employee_service import EmployeeService
-from .services.attendance_service import AttendanceService
-from .services.summary_service import SummaryService
+from services.employee_service import EmployeeService
+from services.attendance_service import AttendanceService
+from services.summary_service import SummaryService
 
 # functions import db lazily to avoid circular imports
 
 def get_db():
-    from .main import db
+    # importing main directly works now that the project root is on sys.path
+    from main import db
     return db
 
 

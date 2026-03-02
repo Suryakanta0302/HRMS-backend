@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status, Depends
-from backend.schemas.attendance import AttendanceCreate, AttendanceRead
-from backend.services.attendance_service import AttendanceService
-from backend.dependencies import get_attendance_service
+from schemas.attendance import AttendanceCreate, AttendanceRead
+from services.attendance_service import AttendanceService
+from dependencies import get_attendance_service
 
 router = APIRouter()
 

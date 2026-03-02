@@ -1,6 +1,6 @@
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from bson import ObjectId
-from ..schemas.employee import EmployeeCreate
+from schemas.employee import EmployeeCreate
 
 class EmployeeService:
     def __init__(self, db: AsyncIOMotorDatabase):

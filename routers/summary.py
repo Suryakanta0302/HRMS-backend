@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
-from ..services.summary_service import SummaryService
-from ..dependencies import get_summary_service
+from services.summary_service import SummaryService
+from dependencies import get_summary_service
 
 router = APIRouter()
 

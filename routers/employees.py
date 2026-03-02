@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, status, Depends
-from backend.schemas.employee import EmployeeCreate, EmployeeRead
-from backend.services.employee_service import EmployeeService
-from backend.dependencies import get_employee_service
+from schemas.employee import EmployeeCreate, EmployeeRead
+from services.employee_service import EmployeeService
+from dependencies import get_employee_service
 
 router = APIRouter()
 

@@ -21,8 +21,12 @@ This directory contains the Python FastAPI backend for the HRMS Lite project.  I
 ## Running Locally
 
 1. **Environment setup**
-   - Navigate to `backend` folder.
+   - Navigate to project root (this directory).  There is no separate `backend` subfolder.
    - Create a virtual environment (e.g. `python -m venv .venv`) and activate it.
+   # from the project root
+source .venv/bin/activate
+# or equivalently
+. .venv/bin/activate
    - Copy `.env.example` to `.env` and set `MONGO_URI` to your MongoDB connection string. Defaults to `mongodb://localhost:27017/hrms`.
    - Install dependencies:
      ```bash
@@ -30,13 +34,17 @@ This directory contains the Python FastAPI backend for the HRMS Lite project.  I
      ```
 
 2. **Starting the server**
+   - Make sure a MongoDB instance is accessible at the URI specified by
+     `MONGO_URI` (default is `mongodb://localhost:27017/hrms`).  For local
+     development you can run `mongod` in another terminal, or change
+     `MONGO_URI` to point at a hosted database.
    - From the *workspace root* (`e:\HRM_Interview`), run one of:
      ```bash
-     python -m uvicorn backend.main:app --reload --port 5000
+     python -m uvicorn main:app --reload --port 5000  # run from repository root (no `backend.` prefix)
      ```
      or (if uvicorn is on PATH):
      ```bash
-     uvicorn backend.main:app --reload --port 5000
+     uvicorn main:app --reload --port 5000
      ```
    - Both forms set the Python path correctly; starting from inside `backend` may result in import errors, though `main.py` now includes a path fix to mitigate that.
    

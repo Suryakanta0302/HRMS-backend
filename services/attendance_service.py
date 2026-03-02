@@ -1,5 +1,5 @@
 from motor.motor_asyncio import AsyncIOMotorDatabase
-from ..schemas.attendance import AttendanceCreate
+from schemas.attendance import AttendanceCreate
 from datetime import datetime
 
 class AttendanceService:
