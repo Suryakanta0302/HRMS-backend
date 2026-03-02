@@ -39,7 +39,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/hrms")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://mongo:BcJAZbGdWrCrhbvgUPsrVVMalICDMKDR@turntable.proxy.rlwy.net:36886/hrms")
 client = AsyncIOMotorClient(MONGO_URI)
 db = client.hrms
 
